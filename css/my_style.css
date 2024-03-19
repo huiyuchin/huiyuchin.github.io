@@ -1,9 +1,25 @@
-p{color:darkslategray;}
-
-.blueblue{
-    color:aquamarine;
+p{
+    color: rgb(5, 72, 72);
 }
-
+.blueblue{
+    color:rgb(20, 235, 239);
+    font-size: 44px;
+    text-align: right;
+}
+#redred{
+    color: tomato;
+}
+.songsong{
+    font-family: "Noto Serif TC", serif;
+    font-size: 24px;
+    color:coral;
+}
+body{
+    font-family: 'Noto Sans TC',sans-serif;
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+    font-family: 'Noto Sans TC',sans-serif;
+}
 .expedu_icon{
     color:pink;
 }
