@@ -1,0 +1,13 @@
+p{color:darkslategray;}
+
+.blueblue{
+    color:aquamarine;
+}
+
+.expedu_icon{
+    color:pink;
+}
+.expedu_icon:hover{
+    background-color: hotpink;
+    color:pink;  
+}
