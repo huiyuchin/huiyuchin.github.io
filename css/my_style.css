@@ -1,10 +1,22 @@
 p{
     color: rgb(5, 72, 72);
 }
-.blueblue{
+p#blueblue{
     color:rgb(20, 235, 239);
     font-size: 44px;
-    text-align: right;
+    background-image: url(../assets/img/sky.jpg);
+    background-size: cover;
+    border: 5px solid;
+    border-color: hotpink;
+    text-align:center;
+    background-color: rgba(247, 216, 221, 0.907);
+}
+.bg-primary{
+background-color:antiquewhite !important;
+font-size: 44px;
+background-image: url(../assets/img/sky.jpg);
+background-repeat: no-repeat;
+background-size: cover;
 }
 #redred{
     color: tomato;
