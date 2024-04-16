@@ -1,15 +1,26 @@
 p{
     color: rgb(5, 72, 72);
 }
-p#blueblue{
+
+.navsize{
+    font-size: 30px;
+}
+div#blueblue{
     color:rgb(20, 235, 239);
     font-size: 44px;
     background-image: url(../assets/img/sky.jpg);
     background-size: cover;
     border: 5px solid;
     border-color: hotpink;
+    border-radius: 10px;
     text-align:center;
     background-color: rgba(247, 216, 221, 0.907);
+    padding: 30px ;
+    margin: 50px auto;
+}
+.test{ 
+    color: azure;
+    font-size: xx-small;
 }
 .bg-primary{
 background-color:antiquewhite !important;
@@ -46,7 +57,7 @@ ol.zoeylist{
 hr.blank{
     margin: 50px 0px;
 }
-
+/*
 ol.zoeylist>li:hover{
     background-color: chartreuse;
 }
@@ -77,5 +88,4 @@ table.zoeytable tr:nth-child(odd){
     color: black;
 }
 
-
-
+*/
