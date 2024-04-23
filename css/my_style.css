@@ -89,3 +89,18 @@ table.zoeytable tr:nth-child(odd){
 }
 
 */
+
+.overflowtest{
+    background-color: antiquewhite;
+    color: brown;
+    padding: 10px;
+    border-radius: 10px 20px;
+    width: auto;
+    margin: 30px auto;
+    overflow: scroll;
+}
+
+.card-img-top{
+    width: auto;
+    height: 250px;
+}
