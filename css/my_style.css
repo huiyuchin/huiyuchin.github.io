@@ -154,4 +154,10 @@ table.zoeytable tr:nth-child(odd){
     background-size: cover;
     color:antiquewhite;
 }
-
+.coolor{
+    color: antiquewhite;
+}
+.under{
+    color: rgb(40, 182, 239);
+    
+}
