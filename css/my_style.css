@@ -8,7 +8,7 @@ p{
 div#blueblue{
     color:rgb(20, 235, 239);
     font-size: 44px;
-    background-image: url(../assets/img/seaa.JPG);
+    background-image: url(../assets/img/seaa.jpg);
     background-size: cover;
     border: 5px solid;
     border-color: hotpink;
@@ -25,7 +25,7 @@ div#blueblue{
 .bg-primary{
 background-color:antiquewhite !important;
 font-size: 44px;
-background-image: url(../assets/img/sea.jpg);
+background-image: url(../assets/img/sea2.jpg);
 background-repeat: no-repeat;
 background-size: cover;
 }
@@ -103,4 +103,49 @@ table.zoeytable tr:nth-child(odd){
 .card-img-top{
     width: auto;
     height: 250px;
+}
+.dd{
+    font-size: 50px;
+    text-align: center;
+    font-family: "PT Serif", serif;
+    color: rgb(58, 81, 95) !important;
+    text-transform: capitalize;
+
+}
+.center{
+    text-align: center; 
+    font-family: 'Noto Sans TC',sans-serif;
+    
+}
+
+.mail{
+    color: rgb(58, 81, 95);
+    text-transform: lowercase;
+}
+.zoey{
+    padding-right: 50px !important;
+}
+.lip{
+    color: dimgray;
+}
+.bor{
+    border: 2px solid;
+    border-color: rgb(252, 189, 204);
+}
+.weight{
+    font-weight: 100;
+}
+.card-img-top{
+  
+        width: auto;
+        height: 300px; 
+    }
+.zoeypro:hover{
+   
+}
+.w-100{
+    width: 100% !important;
+}
+.ins{
+    text-align:center;
 }
