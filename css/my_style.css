@@ -91,10 +91,10 @@ table.zoeytable tr:nth-child(odd){
 */
 
 .overflowtest{
-    background-color: antiquewhite;
-    color: brown;
+    background-color: rgba(250, 235, 215, 0.39);
+    color: rgb(58, 81, 95);
     padding: 10px;
-    border-radius: 10px 20px;
+    border-radius: 10px;
     width: auto;
     margin: 30px auto;
     overflow: scroll;
@@ -108,7 +108,7 @@ table.zoeytable tr:nth-child(odd){
     font-size: 50px;
     text-align: center;
     font-family: "PT Serif", serif;
-    color: rgb(58, 81, 95) !important;
+    color: rgb(207, 217, 223) !important;
     text-transform: capitalize;
 
 }
@@ -149,3 +149,9 @@ table.zoeytable tr:nth-child(odd){
 .ins{
     text-align:center;
 }
+#about{
+    background-image: url(../assets/img/skyyyy.jpeg);
+    background-size: cover;
+    color:antiquewhite;
+}
+
