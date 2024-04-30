@@ -161,3 +161,6 @@ table.zoeytable tr:nth-child(odd){
     color: rgb(40, 182, 239);
     
 }
+.subheading{
+    font-family: serif !important;
+}
