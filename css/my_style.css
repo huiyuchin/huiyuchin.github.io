@@ -91,7 +91,7 @@ table.zoeytable tr:nth-child(odd){
 */
 
 .overflowtest{
-    background-color: rgba(250, 235, 215, 0.39);
+    background-color: rgba(250, 235, 215, 0.512);
     color: rgb(58, 81, 95);
     padding: 10px;
     border-radius: 10px;
