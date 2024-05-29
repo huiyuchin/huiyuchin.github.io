@@ -159,8 +159,9 @@ margin-top: 0.5rem;
     bottom: 0%;
 }
 
-
-
-
+.team-member img {
+    width: 150px; 
+    height: auto;
+}
 
 
