@@ -9,32 +9,10 @@
     background-size: cover;
 
 }
-.card-img-top{
-    height: 300px;
-    width: auto;
-}
-.card-title{
-    background-color:rgb(81, 93, 104);
-    color: aliceblue;
-    padding: 15px;
-    margin-bottom: 30px;
-}
-.card-body{
-    background-color: black;
-    height: 350px;
-
-}
 .card{
     border: none;
-    border-color: rgb(255, 237, 210);
 }
-.card:not(:last-child) {
-    border-right: 1px solid rgba(0, 0, 0, 0.125);
-  }
 
-.card-text{
-    color: aliceblue;
-}
 .text-muted{
 color: rgb(255, 255, 255);
 
@@ -49,6 +27,7 @@ color: rgb(255, 255, 255);
 }
 
 .custom-btn{
+
     background-color: aliceblue !important;
     border-color: aliceblue !important;
     color:black;
@@ -58,8 +37,8 @@ color: rgb(255, 255, 255);
     
 }
 .overflowtest{
-    background-color: rgb(47, 56, 50);
-    color: rgb(255, 255, 255);
+    background-color: #22302F;
+    color:aliceblue;
     padding: 10px;
     border-radius: 20px;
     width: auto;
@@ -67,7 +46,6 @@ color: rgb(255, 255, 255);
     overflow: scroll;
     padding: 20px 30px;
 }
-
 
 .text{
     color: aliceblue;
@@ -105,7 +83,8 @@ color: rgb(255, 255, 255);
     bottom: 0;
     left: 0;
     width: 30%;
-    border-bottom: 2px solid aliceblue; 
+    border-bottom: 2px solid #e4cab8; 
+    
 }
 
 .list-group-item-black{
@@ -198,4 +177,57 @@ margin-top: 0.5rem;
     padding: 10px; 
     margin-bottom: 20px; 
     column-width: 20% ;
+}
+.table-container1{
+margin: right 0;;
+}
+
+.card-img-top1{
+    height: 300px;
+    width: auto;
+}
+.card-title1{
+    background-color:rgb(81, 93, 104);
+    color: aliceblue;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.card-body1{
+    background-color: black;
+    height: 350px;
+
+}
+.card1{
+    border: none;
+    border-color: #e4cab8;
+}
+
+.card1:not(:last-child) {
+    border-right: 1px solid #e4cab8; 
+  }
+
+.card-text1{
+    color: aliceblue;
+}
+
+.text-muted{
+color: rgb(255, 255, 255);
+
+}
+.card2{
+    border: none;
+    background-color: black;
+}
+.card2:not(:last-child) {
+    border-bottom: 1px solid #e4cab8; 
+  }
+.card-body2{
+    background-color: black;
+    max-height: 100%;
+}
+.bg-dark{
+    background-color: black;
+}
+.max-height-100{
+    max-height: 100%;
 }
