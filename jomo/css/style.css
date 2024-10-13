@@ -32,7 +32,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Nunito", sans-serif;
+  --font-family-sans-serif:"Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -367,7 +367,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
 }
 
 @media (max-width: 1200px) {
@@ -377,7 +377,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 @media (max-width: 1200px) {
