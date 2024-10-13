@@ -9,7 +9,7 @@ html, body {
 .jomo-carousel-container {
   position: relative;
   height: 100vh; /* 佔滿整個視窗高度 */
-  overflow: hidden;
+  overflow: hidden; /* 隱藏溢出的內容 */
 }
 
 .jomo-carousel-container .carousel-inner,
@@ -19,14 +19,14 @@ html, body {
 
 .jomo-carousel-container .carousel-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto; /* 保持圖片原始比例 */
+  max-height: 100vh; /* 最大高度為視窗高度 */
 }
 
 /* 自定義控制按鈕樣式 */
 .custom-carousel-control {
   position: absolute;
-  bottom: 3%; /* 調整距離 */
+  bottom: 20px; /* 調整距離底部的距離 */
   left: 50%;
   transform: translateX(-50%);
   z-index: 10; /* 確保按鈕在最上層 */
@@ -46,7 +46,7 @@ html, body {
   transition: transform 0.3s ease;
 }
 
-.custom-carousel-control .custom-button-img:hoverz {
+.custom-carousel-control .custom-button-img:hover {
   transform: scale(1.1); /* 懸停時放大 */
 }
 
@@ -68,4 +68,16 @@ html, body {
     width: 100px; /* 增大按鈕大小 */
   }
 }
+.custom-carousel-control .custom-button-img {
+  width: 200px; /* 固定按鈕大小 */
+  height: 50px; /* 可根據需要調整高度 */
+  cursor: pointer;
+  /* 可選：移除過渡效果 */
+  /* transition: transform 0.3s ease; */
+}
 
+/* 如果需要懸停效果，使用下面的代碼 */
+.custom-carousel-control .custom-button-img:hover {
+  /* 可選：放大效果可改為更輕微的變化 */
+  /* transform: scale(1.05); */
+}

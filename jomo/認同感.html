@@ -44,7 +44,7 @@
       </button>
       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
         <div class="navbar-nav font-weight-bold mx-auto py-0">
-          <a href="index.html" class="nav-item nav-link active">首頁</a>
+          <a href="index.html" class="nav-item nav-link active">登陸JOMO</a>
 
           <div class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">關於我們</a>
@@ -55,7 +55,7 @@
           </div>
 
           <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">兒童網路素養</a>
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">AI繪本</a>
             <div class="dropdown-menu rounded-0 m-0">
               <a href="認同感.html" class="dropdown-item">認同感</a>
               <a href="詐騙.html" class="dropdown-item">網路詐騙</a>
@@ -102,8 +102,8 @@
 <div class="container-fluid pt-3 pb-3">
   <div class="container">
     <div class="tv-frame">
-      <h1 class="tv-title">認同感</h1> <!-- 將標題放入電視框架內 -->
-      <img id="photo" src="img/photo1.jpg" alt="Photo Viewer">
+      <h1 class="tv-title">小奈與她的正能量手環</h1> <!-- 將標題放入電視框架內 -->
+      <img id="photo" src="img/1.JPG" alt="Photo Viewer">
     </div>
 
     <div class="progress" onclick="seek(event)">
@@ -112,25 +112,25 @@
 
     <div class="controls-container">
       <select id="photoSelect" onchange="changePhoto()">
-        <option value="img/photo1.jpg" data-audio="">角色</option>
-        <option value="img/photo2.jpg" data-audio="audio/封面.mp3">封面</option>
-        <option value="img/photo3.jpg" data-audio="audio/1.mp3">第1頁</option>
-        <option value="img/photo4.jpg" data-audio="audio/2.mp3">第2頁</option>
-        <option value="img/photo5.jpg" data-audio="audio/3.mp3">第3頁</option>
-        <option value="img/photo6.jpg" data-audio="audio/4.mp3">第4頁</option>
-        <option value="img/photo7.jpg" data-audio="audio/5.mp3">第5頁</option>
-        <option value="img/photo8.jpg" data-audio="audio/6.mp3">第6頁</option>
-        <option value="img/photo9.jpg" data-audio="audio/7.mp3">第7頁</option>
-        <option value="img/photo10.jpg" data-audio="audio/8.mp3">第8頁</option>
-        <option value="img/photo11.jpg" data-audio="audio/9.mp3">第9頁</option>
-        <option value="img/photo12.jpg" data-audio="audio/10.mp3">第10頁</option>
-        <option value="img/photo13.jpg" data-audio="audio/11.mp3">第11頁</option>
-        <option value="img/photo14.jpg" data-audio="audio/12.mp3">第12頁</option>
-        <option value="img/photo15.jpg" data-audio="audio/13.mp3">第13頁</option>
-        <option value="img/photo16.jpg" data-audio="audio/14.mp3">第14頁</option>
-        <option value="img/photo17.jpg" data-audio="audio/15.mp3">第15頁</option>
-        <option value="img/photo18.jpg" data-audio="audio/16.mp3">第16頁</option>
-        <option value="img/photo19.jpg" data-audio="">封底</option>
+        <option value="img/1.JPG" data-audio="audio/封面.mp3">封面</option>
+        <option value="img/2.JPG" data-audio="audio/1.mp3">第0頁</option>
+        <option value="img/3.jpeg" data-audio="audio/1.mp3">第1頁</option>
+        <option value="img/4.jpeg" data-audio="audio/2.mp3">第2頁</option>
+        <option value="img/5.jpeg" data-audio="audio/3.mp3">第3頁</option>
+        <option value="img/6.jpeg" data-audio="audio/4.mp3">第4頁</option>
+        <option value="img/7.jpeg" data-audio="audio/5.mp3">第5頁</option>
+        <option value="img/8.jpeg" data-audio="audio/6.mp3">第6頁</option>
+        <option value="img/9.jpeg" data-audio="audio/7.mp3">第7頁</option>
+        <option value="img/10.jpeg" data-audio="audio/8.mp3">第8頁</option>
+        <option value="img/11.jpeg" data-audio="audio/9.mp3">第9頁</option>
+        <option value="img/12.jpeg" data-audio="audio/10.mp3">第10頁</option>
+        <option value="img/13.jpeg" data-audio="audio/11.mp3">第11頁</option>
+        <option value="img/14.jpeg" data-audio="audio/12.mp3">第12頁</option>
+        <option value="img/15.jpeg" data-audio="audio/13.mp3">第13頁</option>
+        <option value="img/16.jpeg" data-audio="audio/14.mp3">第14頁</option>
+        <option value="img/17.jpeg" data-audio="audio/15.mp3">第15頁</option>
+        <option value="img/18.jpeg" data-audio="audio/16.mp3">第16頁</option>
+        <option value="img/19.jpeg" data-audio="">封底</option>
       </select>
 
       <button id="prevBtn" onclick="prevPhoto()">上一張</button>
@@ -150,25 +150,25 @@
       let photoIndex = 0;
   // 新增封底圖片和音訊
 const photos = [
-    { src: "img/photo1.jpg", audio: "" },
-    { src: "img/photo2.jpg", audio: "audio/封面.mp3" },
-    { src: "img/photo3.jpg", audio: "audio/1.mp3" },
-    { src: "img/photo4.jpg", audio: "audio/2.mp3" },
-    { src: "img/photo5.jpg", audio: "audio/3.mp3" },
-    { src: "img/photo6.jpg", audio: "audio/4.mp3" },
-    { src: "img/photo7.jpg", audio: "audio/5.mp3" },
-    { src: "img/photo8.jpg", audio: "audio/6.mp3" },
-    { src: "img/photo9.jpg", audio: "audio/7.mp3" },
-    { src: "img/photo10.jpg", audio: "audio/8.mp3" },
-    { src: "img/photo11.jpg", audio: "audio/9.mp3" },
-    { src: "img/photo12.jpg", audio: "audio/10.mp3" },
-    { src: "img/photo13.jpg", audio: "audio/11.mp3" },
-    { src: "img/photo14.jpg", audio: "audio/12.mp3" },
-    { src: "img/photo15.jpg", audio: "audio/13.mp3" },
-    { src: "img/photo16.jpg", audio: "audio/14.mp3" },
-    { src: "img/photo17.jpg", audio: "audio/15.mp3" },
-    { src: "img/photo18.jpg", audio: "audio/16.mp3" },
-    { src: "img/photo19.jpg", audio: "audio/封底.mp3" } // 新增封底
+    { src: "img/1.JPG", audio: "audio/封面.mp3" },
+    { src: "img/2.JPG", audio: "audio/0.mp3" },
+    { src: "img/3.jpeg", audio: "audio/1.mp3" },
+    { src: "img/4.jpeg", audio: "audio/2.mp3" },
+    { src: "img/5.jpeg", audio: "audio/3.mp3" },
+    { src: "img/6.jpeg", audio: "audio/4.mp3" },
+    { src: "img/7.jpeg", audio: "audio/5.mp3" },
+    { src: "img/8.jpeg", audio: "audio/6.mp3" },
+    { src: "img/9.jpeg", audio: "audio/7.mp3" },
+    { src: "img/10.jpeg", audio: "audio/8.mp3" },
+    { src: "img/11.jpeg", audio: "audio/9.mp3" },
+    { src: "img/12.jpeg", audio: "audio/10.mp3" },
+    { src: "img/13.jpeg", audio: "audio/11.mp3" },
+    { src: "img/14.jpeg", audio: "audio/12.mp3" },
+    { src: "img/15.jpeg", audio: "audio/13.mp3" },
+    { src: "img/16.jpeg", audio: "audio/14.mp3" },
+    { src: "img/17.jpeg", audio: "audio/15.mp3" },
+    { src: "img/18.jpeg", audio: "audio/16.mp3" },
+    { src: "img/19.jpeg", audio: "audio/封底.mp3" } // 新增封底
 ];
 
 // 切換圖片和音訊
@@ -258,11 +258,11 @@ document.getElementById('photoSelect').addEventListener('change', function() {
   
 
  <!-- Footer Start -->
- <footer class="container-fluid bg-secondary text-white mt-4 py-3 px-sm-2 px-md-3">
+<footer class="container-fluid bg-secondary text-white mt-4 py-3 px-sm-2 px-md-3">
   <div class="row pt-3 justify-content-center">
     <div class="col-lg-3 col-md-6 mb-3">
       <a href="#" class="navbar-brand font-weight-bold text-primary m-0 mb-2 p-0" style="font-size: 25px; line-height: 25px;">
-        <img class="img-fluid mt-2" src="img/頁尾主視覺.png" alt="JOMO Logo" />
+        <img class="img-fluid mt-2 footer-logo" src="img/頁尾主視覺.png" alt="JOMO Logo" />
       </a>
       <div class="d-flex align-items-center mt-2">
         <a href="https://www.instagram.com/jomo.planet" target="_blank" class="text-primary" style="font-size: 20px; margin-right: 5px;">
@@ -271,7 +271,7 @@ document.getElementById('photoSelect').addEventListener('change', function() {
         <a href="https://www.instagram.com/jomo.planet" target="_blank" class="text-white" style="text-decoration: none;">
           Joy Of Missing Out
         </a>
-      </div>      
+      </div>
     </div>    
     <div class="col-lg-3 col-md-6 mb-3 offset-lg-1">
       <h4 class="text-primary mb-1">聯絡我們</h4>
@@ -279,14 +279,14 @@ document.getElementById('photoSelect').addEventListener('change', function() {
         <h5 class="fa fa-map-marker-alt text-primary mt-1 mr-1"></h5>
         <div>
           <h6 class="text-white mb-1">地址</h6>
-          <p>台北市木柵路一段17號</p>
+          <p>台北市木柵路一段17巷1號</p>
         </div>
       </div>
       <div class="d-flex mb-1">
         <h5 class="fa fa-envelope text-primary mt-1 mr-1"></h5>
         <div>
           <h6 class="text-white mb-1">信箱</h6>
-          <p>jomo@gmail.com</p>
+          <a href="mailto:jomo.shu.icu@gmail.com" target="_blank" class="mail">jomo.shu.icu@gmail.com</a>
         </div>
       </div>
       <div class="d-flex">
@@ -316,7 +316,7 @@ document.getElementById('photoSelect').addEventListener('change', function() {
     </p>
   </div>
 </footer>
- <!-- Footer End -->
+<!-- Footer End -->
  <!-- Back to Top -->
  <a href="#" class="btn btn-primary p-2 back-to-top"
   ><i class="fa fa-angle-double-up"></i</a>

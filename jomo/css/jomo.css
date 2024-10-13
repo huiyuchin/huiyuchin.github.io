@@ -488,4 +488,9 @@ h1, h2, h3, h4, h5, h6 {
   audio {
     display: none;
   }
+  .footer-logo {
+    max-width: 100%; /* 確保圖片的最大寬度不超過容器的 100% */
+    height: auto; /* 自動調整高度以保持比例 */
+  }
+  
   
