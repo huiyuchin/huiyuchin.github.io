@@ -61,7 +61,7 @@ a:hover {
 }
 
 .accordion-item button {
-    background-color: #f3eccf;
+    background-color: #d6fcff;
     color: #c03079;
     border: none;
     width: 100%;
@@ -102,7 +102,7 @@ a:hover {
     background-color: var(--primary-color);
 }
 .card {
-    background-color: #f3eccf;
+    background-color: #d6fcff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 1rem;
@@ -165,8 +165,8 @@ a:hover {
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      background-color: #f3eccf;
-      border: 5px solid #f3eccf; /* 藍色邊框 */
+      background-color: #d6fcff;
+      border: 5px solid #d6fcff; /* 藍色邊框 */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -183,7 +183,7 @@ a:hover {
       margin-top: 20px;
       display: inline-block;
       padding: 10px 20px;
-      background-color: #f3eccf; /* 背景顏色 */
+      background-color: #d6fcff; /* 背景顏色 */
       color: #c03079; /* 字體顏色 */
       border-radius: 15px; /* 圓角矩形 */
       font-size: 20px;
@@ -237,11 +237,13 @@ a:hover {
     width: 0%;
     height: 100%;
     background-color: #2196F3;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 10px 0;
+    font-family: ‘cwTeXYen’, sans-serif;
 }
 
 
@@ -492,4 +494,6 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 100%; /* 確保圖片的最大寬度不超過容器的 100% */
     height: auto; /* 自動調整高度以保持比例 */
   }
-  
+  body {
+    padding-top: 80px; /* 根據導覽列的實際高度調整 */
+  }
