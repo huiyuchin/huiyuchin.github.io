@@ -497,3 +497,35 @@ h1, h2, h3, h4, h5, h6 {
   body {
     padding-top: 80px; /* 根據導覽列的實際高度調整 */
   }
+  .page-one .header {
+    background-color: lightblue;
+}
+
+.page-two .header {
+    background-color: lightgreen;
+}
+.main-container .header .title {
+  color: blue;
+}
+.navbar {
+  background-color: #333;
+  color: white;
+  margin-bottom:0!important;
+}
+
+.breadcrumb {
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin-top: -25px !important; /* 移除上方的間距 */
+}
+.btn-green{
+  background-color: #81b4b2 !important;
+  color: #1c302d !important;
+  font-family: Itim;
+  border-color: #4b5756;
+  border-radius: 60px;
+}
+.f4efdc{
+  background-color: #f6f1dd
+}
+
