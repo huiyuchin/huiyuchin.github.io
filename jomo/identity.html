@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>JOMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Free HTML Templates" />
+  <meta name="description" content="Free HTML Templates" />
+
+   <!-- Favicon -->
+   <link href="img/favicon.ico" rel="icon" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Flaticon Font -->
+  <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/jomo.css" rel="stylesheet" />
+  <link href="css/tv.css" rel="stylesheet" />
+ 
+</head>
+<body>
+ 
+  
+<!-- Navbar Start -->
+<div class="container-fluid bg-light fixed-top shadow blue">
+  <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+    <a href="index.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 40px;">
+      <img src="img/JOMO_LOGO_1.png" alt="JOMO Logo" />
+      <img src="img/logo 2.png" alt="JOMO Logo" />
+    </a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between blue" id="navbarCollapse">
+      <div class="navbar-nav font-weight-bold ml-auto py-0">
+        <div class="nav-item">
+          <a href="aboutus.html" class="nav-link">關於我們</a>
+        </div>
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">JOMO書櫃</a>
+          <div class="dropdown-menu rounded-0 m-0">
+            <a href="identity.html" class="dropdown-item">認同感</a>
+            <a href="scam.html" class="dropdown-item">網路詐騙</a>
+            <a href="addiction.html" class="dropdown-item">網路成癮</a>
+            <a href="imitate.html" class="dropdown-item">模仿不良行為</a>
+            <a href="bully.html" class="dropdown-item">網路霸凌</a>
+          </div>
+        </div>
+
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">家長專區</a>
+          <div class="dropdown-menu rounded-0 m-0">
+            <a href="child.html" class="dropdown-item">兒童常用平台介紹</a>
+            <a href="filter.html" class="dropdown-item">過濾軟體介紹</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="regulation.html" class="nav-link">法規教室</a>
+        </div>
+        <div class="nav-item">
+          <a href="game.html" class="nav-link">JOMO遊戲室</a>
+        </div>
+       
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- Navbar End -->
+
+<!-- 主內容開始，添加上邊距 -->
+<div class="container mt-5 mb-5">
+  <!-- 主要內容 -->
+</div>
+
+
+
+ 
+<div class="container-fluid pt-3 pb-3"> 
+  <div class="container"> 
+      <div class="row"> 
+          <!-- 書櫃區域 --> 
+          <div class="col-md-3 text-left"> <!-- 將文字對齊方式設置為右 -->
+            <div class="bookshelf">
+                <a href="imitate.html" class="book">
+                    <img src="img/1.JPG" alt="模仿不良行為" class="book-img">
+                    <p>模仿不良行為</p> <!-- 書籍的文字 -->
+                </a>
+                <a href="scam.html" class="book">
+                    <img src="img/1.JPG" alt="網路詐騙" class="book-img">
+                    <p>網路詐騙</p> <!-- 書籍的文字 -->
+                </a>
+                <a href="addiction.html" class="book">
+                    <img src="img/1.JPG" alt="網路成癮" class="book-img">
+                    <p>網路成癮</p> <!-- 書籍的文字 -->
+                </a>
+                <a href="bully.html" class="book">
+                    <img src="img/1.JPG" alt="網路霸凌" class="book-img">
+                    <p>網路霸凌</p> <!-- 書籍的文字 -->
+                </a>
+            </div>
+        </div>
+
+
+        
+        
+        
+
+        <!-- 播放器區域 -->
+<div class="col-md-7"> <!-- 增加此區域來顯示播放器 -->
+  <div class="tv-frame">
+      <h1 class="tv-title">小奈與她的正能量手環</h1>
+      <img id="photo" src="img/1.JPG" alt="Photo Viewer" class="img-fluid rounded shadow-sm">
+  </div>
+
+  <div class="controls-container">
+      <select id="photoSelect" onchange="changePhoto()">
+          <option value="img/1.JPG" data-audio="audio/封面.mp3">封面</option>
+          <option value="img/2.JPG" data-audio="audio/0.mp3">第0頁</option>
+          <option value="img/3.jpeg" data-audio="audio/1.mp3" >第1頁</option>
+          <option value="img/4.jpeg" data-audio="audio/2.mp3" >第2頁</option>
+          <option value="img/5.jpeg" data-audio="audio/3.mp3" >第3頁</option>
+          <option value="img/6.jpeg" data-audio="audio/4.mp3" >第4頁</option>
+          <option value="img/7.jpeg" data-audio="audio/5.mp3" >第5頁</option>
+          <option value="img/8.jpeg" data-audio="audio/6.mp3" >第6頁</option>
+          <option value="img/9.jpeg" data-audio="audio/7.mp3" >第7頁</option>
+          <option value="img/10.jpeg" data-audio="audio/8.mp3" >第8頁</option>
+          <option value="img/11.jpeg" data-audio="audio/9.mp3" >第9頁</option>
+          <option value="img/12.jpeg" data-audio="audio/10.mp3" >第10頁</option>
+          <option value="img/13.jpeg" data-audio="audio/11.mp3" >第11頁</option>
+          <option value="img/14.jpeg" data-audio="audio/12.mp3" >第12頁</option>
+          <option value="img/15.jpeg" data-audio="audio/13.mp3" >第13頁</option>
+          <option value="img/16.jpeg" data-audio="audio/14.mp3" >第14頁</option>
+          <option value="img/17.jpeg" data-audio="audio/15.mp3" >第15頁</option>
+          <option value="img/18.jpeg" data-audio="audio/16.mp3" >第16頁</option>
+      </select>
+
+      <button id="prevBtn" onclick="prevPhoto()">上一張</button>
+      <button id="playPauseBtn" onclick="playPausePhoto()">播放</button>
+      <button id="nextBtn" onclick="nextPhoto()">下一張</button>
+  </div>
+
+  <audio id="audio"></audio>
+</div>
+</div>
+  </div>
+</div>
+
+<script>
+const photo = document.getElementById('photo');
+const photoSelect = document.getElementById('photoSelect');
+const audio = document.getElementById('audio');
+
+let photoIndex = 0;
+
+const photos = [
+    { src: "img/1.JPG", audio: "audio/封面.mp3" },
+    { src: "img/2.JPG", audio: "audio/0.mp3" },
+    { src: "img/3.jpeg", audio: "audio/1.mp3"},
+    { src: "img/4.jpeg", audio: "audio/2.mp3"},
+    { src: "img/5.jpeg", audio: "audio/3.mp3" },
+    { src: "img/6.jpeg", audio: "audio/4.mp3"},
+    { src: "img/7.jpeg", audio: "audio/5.mp3" },
+    { src: "img/8.jpeg", audio: "audio/6.mp3" },
+    { src: "img/9.jpeg", audio: "audio/7.mp3" },
+    { src: "img/10.jpeg", audio: "audio/8.mp3" },
+    { src: "img/11.jpeg", audio: "audio/9.mp3" },
+    { src: "img/12.jpeg", audio: "audio/10.mp3" },
+    { src: "img/13.jpeg", audio: "audio/11.mp3" },
+    { src: "img/14.jpeg", audio: "audio/12.mp3" },
+    { src: "img/15.jpeg", audio: "audio/13.mp3" },
+    { src: "img/16.jpeg", audio: "audio/14.mp3"},
+    { src: "img/17.jpeg", audio: "audio/15.mp3" },
+    { src: "img/18.jpeg", audio: "audio/16.mp3" }
+];
+
+let isPlaying = false;
+
+function changePhoto() {
+    photoIndex = photoSelect.selectedIndex;
+    photo.src = photos[photoIndex].src;
+    audio.src = photos[photoIndex].audio;
+    resetProgress(); 
+    if (audio.readyState >= 2 && isPlaying) {
+        audio.play();
+    }
+    updateProgress();
+}
+
+
+function playPausePhoto() {
+    if (!isPlaying) {
+        playPhoto();
+    } else {
+        pausePhoto();
+    }
+}
+
+function playPhoto() {
+    isPlaying = true;
+    if (audio.src) {
+        audio.load(); // 預載入音訊
+        audio.play();
+    }
+    document.getElementById('playPauseBtn').textContent = '暫停';
+}
+
+function pausePhoto() {
+    isPlaying = false;
+    audio.pause();
+    document.getElementById('playPauseBtn').textContent = '播放';
+}
+
+function prevPhoto() {
+    photoIndex = (photoIndex + 1 + photos.length) % photos.length;
+    photoSelect.selectedIndex = photoIndex;
+    document.getElementById('playPauseBtn').textContent = '播放'; // 重置播放按鈕文字
+    changePhoto();
+    pausePhoto(); // 停止播放並重置按鈕
+}
+
+function nextPhoto() {
+    photoIndex = (photoIndex + 1) % photos.length;
+    photoSelect.selectedIndex = photoIndex;
+    document.getElementById('playPauseBtn').textContent = '播放'; // 重置播放按鈕文字
+    changePhoto();
+    pausePhoto(); // 停止播放並重置按鈕
+}
+
+function resetProgress() {
+    const progressFilled = document.querySelector('.progress-filled');
+    progressFilled.style.width = '0%';
+    audio.currentTime = 0; // 重置音頻時間
+}
+
+function updateProgress() {
+    const progressFilled = document.querySelector('.progress-filled');
+    audio.addEventListener('timeupdate', () => {
+        const percent = (audio.currentTime / audio.duration) * 100;
+        progressFilled.style.width = percent + '%';
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    changePhoto(); // 初始化圖片和音訊
+});
+
+document.getElementById('photoSelect').addEventListener('change', function() {
+    changePhoto();
+    if (audio.src) {
+        audio.load(); // 預載入音訊
+    }
+});
+
+</script>
+ </div>
+</div>
+
+  
+
+<!-- Footer Start -->
+<div class="container-fluid bg-light fixed-down shadow blue mt-5">
+  <div class="row pt-3 justify-content-center">
+    <div class="col-lg-3 col-md-6 mb-3">
+      <a href="#" class="navbar-brand font-weight-bold text-primary m-0 mb-2 p-0" style="font-size: 25px; line-height: 25px;">
+        <img class="img-fluid mt-2 footer-logo" src="img/jomo 1.png" alt="JOMO Logo" />
+      </a>
+      <div class="d-flex align-items-center mt-2">
+        <a href="https://www.instagram.com/jomo.planet" target="_blank" class="text-primary" style="font-size: 20px; margin-right: 5px;">
+          <i class="fab fa-instagram" style="font-size: 30px;"></i>
+        </a>
+        <a href="https://www.instagram.com/jomo.planet" target="_blank" class="text-white" style="text-decoration: none;">
+          Joy Of Missing Out
+        </a>
+      </div>
+    </div>    
+    <div class="col-lg-3 col-md-6 mb-3 offset-lg-1">
+      <h4 class="text-primary mb-1">聯絡我們</h4>
+      <div class="d-flex mb-1">
+        <h5 class="fa fa-map-marker-alt text-primary mt-1 mr-1"></h5>
+        <div>
+          <h6 class="text-white mb-1">地址</h6>
+          <p>台北市木柵路一段17巷1號</p>
+        </div>
+      </div>
+      <div class="d-flex mb-1">
+        <h5 class="fa fa-envelope text-primary mt-1 mr-1"></h5>
+        <div>
+          <h6 class="text-white mb-1">信箱</h6>
+          <a href="mailto:jomo.shu.icu@gmail.com" target="_blank" class="mail">jomo.shu.icu@gmail.com</a>
+        </div>
+      </div>
+      <div class="d-flex">
+        <h5 class="fa fa-phone-alt text-primary mt-1 mr-1"></h5>
+        <div>
+          <h6 class="text-white mb-1">電話</h6>
+          <p>02-2236-8225</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-3 offset-lg-1">
+      <h4 class="text-primary mb-2">網站地圖</h4>
+      <div class="d-flex flex-column justify-content-start">
+        <a class="text-white mb-3" href="aboutus.html"><i class="fa fa-angle-right mr-1"></i>關於我們</a>
+        <a class="text-white mb-3" href="identity.html"><i class="fa fa-angle-right mr-1"></i>JOMO書櫃</a>
+        <a class="text-white mb-3" href="child.html"><i class="fa fa-angle-right mr-1"></i>兒童常用平台介紹</a>
+        <a class="text-white mb-3" href="filter.html"><i class="fa fa-angle-right mr-1"></i>過濾軟體介紹</a>
+        <a class="text-white mb-3" href="regulation.html"><i class="fa fa-angle-right mr-1"></i>法規教室</a>
+        <a class="text-white mb-3" href="game.html"><i class="fa fa-angle-right mr-1"></i>JOMO遊戲室</a>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid pt-3" style="border-top: 1px solid rgba(23, 162, 184, 0.2);">
+    <p class="m-0 text-center text-white" style="font-size: 10px;">
+       <a class="text-primary font-weight-bold" href="#">JOMO</a> All Rights Reserved.
+      Designed by <a class="text-primary font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+      <br />Distributed By: <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+    </p>
+  </div>
+</footer>
+<!-- Footer End -->
+ <!-- Back to Top -->
+ <a href="#" class="btn btn-primary p-2 back-to-top"
+  ><i class="fa fa-angle-double-up"></i</a>
+ <!-- JavaScript Libraries -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+ <script src="lib/easing/easing.min.js"></script>
+ <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+ <script src="lib/isotope/isotope.pkgd.min.js"></script>
+ <script src="lib/lightbox/js/lightbox.min.js"></script>
+ <!-- Contact Javascript File -->
+ <script src="mail/jqBootstrapValidation.min.js"></script>
+ <script src="mail/contact.js"></script>
+ <!-- Template Javascript -->
+ <script src="js/main.js"></script>
+ </body>
+ </html>

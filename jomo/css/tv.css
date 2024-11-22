@@ -1,0 +1,144 @@
+.tv-frame {
+  width: 660px; /* 調整寬度以符合一般網頁播放器 */
+  height: 600px; /* 將高度設為371px以保持16:9比例 */
+  margin: 10px auto;
+  padding: 20px; /* 調整內邊距 */
+  background: #f3eccf; /* 改為白色背景 */
+  border-radius: 20px;
+  border: 5px solid #B2DFDB; /* 減少邊框厚度 */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* 減少陰影強度 */
+  position: relative;
+  overflow: hidden;
+  margin-left: 83px;
+  text-align: center;
+}
+
+.tv-title {
+  text-align: center; /* 標題居中 */
+  margin: 0; /* 去除標題的外邊距 */
+  color: #9db8bf; /* 標題顏色 */
+  font-size: 1.5em; /* 調整字體大小 */
+  position: absolute; /* 絕對定位 */
+  top: 15px; /* 從上邊距開始 */
+  left: 50%; /* 左右居中 */
+  transform: translateX(-50%); /* 向左移動自己的一半寬度 */
+}
+
+.tv-frame img {
+  width: 90%; /* 使圖片寬度佔滿容器 */
+  height: auto; /* 高度自動以保持比例 */
+  max-height: 480px; /* 設置最大高度以符合 16:9 比例 */
+  aspect-ratio: 16 / 12; /* 設置長寬比為 16:9*/
+  object-fit: cover; /* 使圖片覆蓋容器並保持比例 */
+  position: relative;
+  top: 10px; /* 調整數值以適合需要的移動量 */
+}
+
+
+.progress {
+  width: 100%;
+  max-width: 600px;
+  height: 10px;
+  background-color: #daa4bf;
+  margin: 10px auto;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.progress-filled {
+  height: 100%;
+  background-color: #3f96ab;
+  width: 0;
+  border-radius: 5px;
+}
+
+.controls-container {
+  display: flex; /* 使用 flexbox 進行排列 */
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  margin: 10px 0; /* 上下邊距 */
+  margin-top: 15px;
+  text-align: center;
+}
+
+
+.controls-container select {
+  margin-right: 80px;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.controls-container button  {
+  margin: 0 10px;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #3f96ab;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 5px; /* 控制按鈕間距 */
+}
+
+
+audio {
+  display: none;
+}
+.footer-logo {
+  max-width: 100%; /* 確保圖片的最大寬度不超過容器的 100% */
+  height: auto; /* 自動調整高度以保持比例 */
+}
+body {
+  padding-top: 80px; /* 根據導覽列的實際高度調整 */
+}
+.page-one .header {
+  background-color: lightblue;
+}
+
+.page-two .header {
+  background-color: lightgreen;
+}
+.main-container .header .title {
+color: blue;
+}
+.navbar {
+background-color: #333;
+color: white;
+margin-bottom:0!important;
+}
+
+.breadcrumb {
+background-color: #f8f9fa;
+padding: 10px;
+margin-top: -25px !important; /* 移除上方的間距 */
+}
+
+
+.bookshelf {
+  display: flex; /* 使用 flexbox 進行排列 */
+  flex-direction: column; /* 垂直排列書籍 */
+  align-items: center; /* 中心對齊書籍 */
+}
+
+.book {
+  margin: 6px; /* 書籍間距 */
+  text-decoration: none; /* 去除下劃線 */
+}
+
+.book-img {
+  width: 168px; /* 設定圖片寬度 */
+  height: 120px; /* 設定圖片高度 */
+  margin-bottom: 10px; /* 增加底部間距 */
+}
+
+.bookshelf p {
+  margin: 3px 0; /* 調整文字與圖片之間的間距 */
+  font-size: 14px; /* 調整文字大小 */
+  color: #3f96ab; /* 調整文字顏色 */
+  text-align: center; /* 文字居中 */
+}
+.button-group button {
+  width: 100px;
+}
