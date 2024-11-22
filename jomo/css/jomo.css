@@ -684,9 +684,18 @@ body {
 .small-title h3 {
   font-size: smaller;
 }
-img {
+.img-200 {
   max-height: 200px; /* 固定圖片高度 */
   object-fit: contain; /* 保持圖片比例不變 */
   display: inline-block; /* 確保圖片不換行 */
   vertical-align: middle; /* 垂直對齊 */
+}
+
+.portfolio-item img{
+
+    max-height: 200px; /* 設定圖片的最大高度 */
+    width: 200px; /* 自動調整寬度以保持比例 */
+    object-fit: contain; /* 保證圖片完整顯示 */
+    display: block; /* 防止圖片默認內聯行為影響布局 */
+    margin: 0 auto; /* 讓圖片在父容器內水平居中 */
 }
