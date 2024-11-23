@@ -694,10 +694,23 @@ body {
 }
 
 .portfolio-item img{
-  
+
     max-height: 200px; /* 設定圖片的最大高度 */
     width: 200px; /* 自動調整寬度以保持比例 */
     object-fit: contain; /* 保證圖片完整顯示 */
     display: block; /* 防止圖片默認內聯行為影響布局 */
     margin: 0 auto; /* 讓圖片在父容器內水平居中 */
+    
+}
+/* 為圖片添加陰影 */
+.star-shadow {
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+  /* 可選：讓圖片滑過時陰影更明顯 */
+
+}
+
+
+.star-shadow {
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+  will-change: filter; /* 提示瀏覽器提前優化陰影渲染 */
 }

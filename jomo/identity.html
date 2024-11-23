@@ -118,145 +118,114 @@
   </div>
 
   <div class="controls-container">
-      <select id="photoSelect" onchange="changePhoto()">
-          <option value="img/1.JPG" data-audio="audio/封面.mp3">封面</option>
-          <option value="img/2.JPG" data-audio="audio/0.mp3">第0頁</option>
-          <option value="img/3.jpeg" data-audio="audio/1.mp3" >第1頁</option>
-          <option value="img/4.jpeg" data-audio="audio/2.mp3" >第2頁</option>
-          <option value="img/5.jpeg" data-audio="audio/3.mp3" >第3頁</option>
-          <option value="img/6.jpeg" data-audio="audio/4.mp3" >第4頁</option>
-          <option value="img/7.jpeg" data-audio="audio/5.mp3" >第5頁</option>
-          <option value="img/8.jpeg" data-audio="audio/6.mp3" >第6頁</option>
-          <option value="img/9.jpeg" data-audio="audio/7.mp3" >第7頁</option>
-          <option value="img/10.jpeg" data-audio="audio/8.mp3" >第8頁</option>
-          <option value="img/11.jpeg" data-audio="audio/9.mp3" >第9頁</option>
-          <option value="img/12.jpeg" data-audio="audio/10.mp3" >第10頁</option>
-          <option value="img/13.jpeg" data-audio="audio/11.mp3" >第11頁</option>
-          <option value="img/14.jpeg" data-audio="audio/12.mp3" >第12頁</option>
-          <option value="img/15.jpeg" data-audio="audio/13.mp3" >第13頁</option>
-          <option value="img/16.jpeg" data-audio="audio/14.mp3" >第14頁</option>
-          <option value="img/17.jpeg" data-audio="audio/15.mp3" >第15頁</option>
-          <option value="img/18.jpeg" data-audio="audio/16.mp3" >第16頁</option>
-      </select>
-
-      <button id="prevBtn" onclick="prevPhoto()">上一張</button>
-      <button id="playPauseBtn" onclick="playPausePhoto()">播放</button>
-      <button id="nextBtn" onclick="nextPhoto()">下一張</button>
-  </div>
+    <select id="photoSelect" onchange="changePhoto()">
+        <option value="img/1.JPG" data-audio="audio/封面.mp3">封面</option>
+        <option value="img/2.JPG" data-audio="audio/0.mp3">第0頁</option>
+        <option value="img/3.jpeg" data-audio="audio/1.mp3">第1頁</option>
+        <option value="img/4.jpeg" data-audio="audio/2.mp3">第2頁</option>
+        <option value="img/5.jpeg" data-audio="audio/3.mp3">第3頁</option>
+        <option value="img/6.jpeg" data-audio="audio/4.mp3">第4頁</option>
+        <option value="img/7.jpeg" data-audio="audio/5.mp3">第5頁</option>
+        <option value="img/8.jpeg" data-audio="audio/6.mp3">第6頁</option>
+        <option value="img/9.jpeg" data-audio="audio/7.mp3">第7頁</option>
+        <option value="img/10.jpeg" data-audio="audio/8.mp3">第8頁</option>
+        <option value="img/11.jpeg" data-audio="audio/9.mp3">第9頁</option>
+        <option value="img/12.jpeg" data-audio="audio/10.mp3">第10頁</option>
+        <option value="img/13.jpeg" data-audio="audio/11.mp3">第11頁</option>
+        <option value="img/14.jpeg" data-audio="audio/12.mp3">第12頁</option>
+        <option value="img/15.jpeg" data-audio="audio/13.mp3">第13頁</option>
+        <option value="img/16.jpeg" data-audio="audio/14.mp3">第14頁</option>
+        <option value="img/17.jpeg" data-audio="audio/15.mp3">第15頁</option>
+        <option value="img/18.jpeg" data-audio="audio/16.mp3">第16頁</option>
+    </select>
+    <button id="prevBtn" onclick="prevPhoto()">上一張</button>
+    <button id="playPauseBtn" onclick="playPausePhoto()">播放</button>
+    <button id="nextBtn" onclick="nextPhoto()">下一張</button>
+</div>
 
   <audio id="audio"></audio>
 </div>
 </div>
-  </div>
 </div>
+</div>
+
 
 <script>
 const photo = document.getElementById('photo');
 const photoSelect = document.getElementById('photoSelect');
 const audio = document.getElementById('audio');
-
 let photoIndex = 0;
-
-const photos = [
-    { src: "img/1.JPG", audio: "audio/封面.mp3" },
-    { src: "img/2.JPG", audio: "audio/0.mp3" },
-    { src: "img/3.jpeg", audio: "audio/1.mp3"},
-    { src: "img/4.jpeg", audio: "audio/2.mp3"},
-    { src: "img/5.jpeg", audio: "audio/3.mp3" },
-    { src: "img/6.jpeg", audio: "audio/4.mp3"},
-    { src: "img/7.jpeg", audio: "audio/5.mp3" },
-    { src: "img/8.jpeg", audio: "audio/6.mp3" },
-    { src: "img/9.jpeg", audio: "audio/7.mp3" },
-    { src: "img/10.jpeg", audio: "audio/8.mp3" },
-    { src: "img/11.jpeg", audio: "audio/9.mp3" },
-    { src: "img/12.jpeg", audio: "audio/10.mp3" },
-    { src: "img/13.jpeg", audio: "audio/11.mp3" },
-    { src: "img/14.jpeg", audio: "audio/12.mp3" },
-    { src: "img/15.jpeg", audio: "audio/13.mp3" },
-    { src: "img/16.jpeg", audio: "audio/14.mp3"},
-    { src: "img/17.jpeg", audio: "audio/15.mp3" },
-    { src: "img/18.jpeg", audio: "audio/16.mp3" }
-];
-
 let isPlaying = false;
 
+const photos = Array.from(photoSelect.options).map(option => ({
+  src: option.value,
+  audio: option.dataset.audio
+}));
+
 function changePhoto() {
-    photoIndex = photoSelect.selectedIndex;
-    photo.src = photos[photoIndex].src;
-    audio.src = photos[photoIndex].audio;
-    resetProgress(); 
-    if (audio.readyState >= 2 && isPlaying) {
-        audio.play();
-    }
-    updateProgress();
+  photoIndex = photoSelect.selectedIndex;
+  updatePhotoAndAudio();
 }
 
+function updatePhotoAndAudio() {
+  const { src, audio: audioSrc } = photos[photoIndex];
+  photo.src = src;
+  audio.src = audioSrc;
+  resetProgress();
+  if (isPlaying) audio.play();
+}
 
 function playPausePhoto() {
-    if (!isPlaying) {
-        playPhoto();
-    } else {
-        pausePhoto();
-    }
+  if (isPlaying) {
+      pausePhoto();
+  } else {
+      playPhoto();
+  }
 }
 
 function playPhoto() {
-    isPlaying = true;
-    if (audio.src) {
-        audio.load(); // 預載入音訊
-        audio.play();
-    }
-    document.getElementById('playPauseBtn').textContent = '暫停';
+  isPlaying = true;
+  audio.play();
+  document.getElementById('playPauseBtn').textContent = '暫停';
 }
 
 function pausePhoto() {
-    isPlaying = false;
-    audio.pause();
-    document.getElementById('playPauseBtn').textContent = '播放';
+  isPlaying = false;
+  audio.pause();
+  document.getElementById('playPauseBtn').textContent = '播放';
 }
 
 function prevPhoto() {
-    photoIndex = (photoIndex + 1 + photos.length) % photos.length;
-    photoSelect.selectedIndex = photoIndex;
-    document.getElementById('playPauseBtn').textContent = '播放'; // 重置播放按鈕文字
-    changePhoto();
-    pausePhoto(); // 停止播放並重置按鈕
+  photoIndex = (photoIndex - 1 + photos.length) % photos.length;
+  photoSelect.selectedIndex = photoIndex;
+  updatePhotoAndAudio();
 }
 
 function nextPhoto() {
-    photoIndex = (photoIndex + 1) % photos.length;
-    photoSelect.selectedIndex = photoIndex;
-    document.getElementById('playPauseBtn').textContent = '播放'; // 重置播放按鈕文字
-    changePhoto();
-    pausePhoto(); // 停止播放並重置按鈕
+  photoIndex = (photoIndex + 1) % photos.length;
+  photoSelect.selectedIndex = photoIndex;
+  updatePhotoAndAudio();
 }
 
 function resetProgress() {
-    const progressFilled = document.querySelector('.progress-filled');
-    progressFilled.style.width = '0%';
-    audio.currentTime = 0; // 重置音頻時間
-}
-
-function updateProgress() {
-    const progressFilled = document.querySelector('.progress-filled');
-    audio.addEventListener('timeupdate', () => {
-        const percent = (audio.currentTime / audio.duration) * 100;
-        progressFilled.style.width = percent + '%';
-    });
+  audio.currentTime = 0;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    changePhoto(); // 初始化圖片和音訊
+  updatePhotoAndAudio();
 });
-
-document.getElementById('photoSelect').addEventListener('change', function() {
-    changePhoto();
-    if (audio.src) {
-        audio.load(); // 預載入音訊
-    }
-});
+function updatePhotoAndAudio() {
+  const { src, audio: audioSrc } = photos[photoIndex];
+  photo.src = src;
+  audio.src = audioSrc;
+  resetProgress();
+  audio.play(); // 切換時自動播放音檔
+  isPlaying = true; // 將狀態設為「播放中」
+  document.getElementById('playPauseBtn').textContent = '暫停'; // 更新按鈕文字
+}
 
 </script>
+
  </div>
 </div>
 

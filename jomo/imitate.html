@@ -124,24 +124,24 @@
 
               <div class="controls-container">
                   <select id="photoSelect" onchange="changePhoto()">
-                      <option value="img/1.JPG" data-audio="audio/封面.mp3">封面</option>
-                      <option value="img/2.JPG" data-audio="audio/0.mp3">第0頁</option>
-                      <option value="img/3.jpeg" data-audio="audio/1.mp3" data-desc="第1頁描述">第1頁</option>
-                      <option value="img/4.jpeg" data-audio="audio/2.mp3" data-desc="第2頁描述">第2頁</option>
-                      <option value="img/5.jpeg" data-audio="audio/3.mp3" data-desc="第3頁描述">第3頁</option>
-                      <option value="img/6.jpeg" data-audio="audio/4.mp3" data-desc="第4頁描述">第4頁</option>
-                      <option value="img/7.jpeg" data-audio="audio/5.mp3" data-desc="第5頁描述">第5頁</option>
-                      <option value="img/8.jpeg" data-audio="audio/6.mp3" data-desc="第6頁描述">第6頁</option>
-                      <option value="img/9.jpeg" data-audio="audio/7.mp3" data-desc="第7頁描述">第7頁</option>
-                      <option value="img/10.jpeg" data-audio="audio/8.mp3" data-desc="第8頁描述">第8頁</option>
-                      <option value="img/11.jpeg" data-audio="audio/9.mp3" data-desc="第9頁描述">第9頁</option>
-                      <option value="img/12.jpeg" data-audio="audio/10.mp3" data-desc="第10頁描述">第10頁</option>
-                      <option value="img/13.jpeg" data-audio="audio/11.mp3" data-desc="第11頁描述">第11頁</option>
-                      <option value="img/14.jpeg" data-audio="audio/12.mp3" data-desc="第12頁描述">第12頁</option>
-                      <option value="img/15.jpeg" data-audio="audio/13.mp3" data-desc="第13頁描述">第13頁</option>
-                      <option value="img/16.jpeg" data-audio="audio/14.mp3" data-desc="第14頁描述">第14頁</option>
-                      <option value="img/17.jpeg" data-audio="audio/15.mp3" data-desc="第15頁描述">第15頁</option>
-                      <option value="img/18.jpeg" data-audio="audio/16.mp3" data-desc="第16頁描述">第16頁</option>
+                    <option value="img/commingsoon.png" data-audio="">封面</option>
+                    <option value="img/commingsoon.png" data-audio="">第0頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第1頁描述">第1頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第2頁描述">第2頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第3頁描述">第3頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第4頁描述">第4頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第5頁描述">第5頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第6頁描述">第6頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第7頁描述">第7頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第8頁描述">第8頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第9頁描述">第9頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第10頁描述">第10頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第11頁描述">第11頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第12頁描述">第12頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第13頁描述">第13頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第14頁描述">第14頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第15頁描述">第15頁</option>
+                    <option value="img/commingsoon.png" data-audio="" data-desc="第16頁描述">第16頁</option>
                   </select>
 
                   <button id="prevBtn" onclick="prevPhoto()">上一張</button>
@@ -157,112 +157,78 @@
 
 <script>
   const photo = document.getElementById('photo');
-  const photoDesc = document.getElementById('photoDesc');
   const photoSelect = document.getElementById('photoSelect');
   const audio = document.getElementById('audio');
-  
   let photoIndex = 0;
-  
-  const photos = [
-      { src: "img/commingsoon.png", audio: "audio/封面.mp3" },
-      { src: "img/commingsoon.png", audio: "audio/0.mp3" },
-      { src: "img/commingsoon.png", audio: "audio/1.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/2.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/3.mp3", desc: "" },
-      { src: "iimg/commingsoon.png", audio: "audio/4.mp3", desc: ""},
-      { src: "img/commingsoon.png", audio: "audio/5.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/6.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/7.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/8.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/9.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/10.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/11.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/12.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/13.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/14.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/15.mp3", desc: "" },
-      { src: "img/commingsoon.png", audio: "audio/16.mp3", desc: "" }
-  ];
-  
   let isPlaying = false;
   
+  const photos = Array.from(photoSelect.options).map(option => ({
+    src: option.value,
+    audio: option.dataset.audio
+  }));
+  
   function changePhoto() {
-      photoIndex = photoSelect.selectedIndex;
-      photo.src = photos[photoIndex].src;
-      audio.src = photos[photoIndex].audio;
-      photoDesc.textContent = photos[photoIndex].desc; // 更新描述文字
-      resetProgress(); 
-      if (audio.readyState >= 2 && isPlaying) {
-          audio.play();
-      }
-      updateProgress();
+    photoIndex = photoSelect.selectedIndex;
+    updatePhotoAndAudio();
+  }
+  
+  function updatePhotoAndAudio() {
+    const { src, audio: audioSrc } = photos[photoIndex];
+    photo.src = src;
+    audio.src = audioSrc;
+    resetProgress();
+    if (isPlaying) audio.play();
   }
   
   function playPausePhoto() {
-      if (!isPlaying) {
-          playPhoto();
-      } else {
-          pausePhoto();
-      }
+    if (isPlaying) {
+        pausePhoto();
+    } else {
+        playPhoto();
+    }
   }
   
   function playPhoto() {
-      isPlaying = true;
-      if (audio.src) {
-          console.log('Playing audio:', audio.src); // 除錯訊息
-          audio.load(); // 預載入音訊
-          audio.play();
-      }
-      document.getElementById('playPauseBtn').textContent = '暫停';
+    isPlaying = true;
+    audio.play();
+    document.getElementById('playPauseBtn').textContent = '暫停';
   }
   
   function pausePhoto() {
-      isPlaying = false;
-      audio.pause();
-      document.getElementById('playPauseBtn').textContent = '播放';
+    isPlaying = false;
+    audio.pause();
+    document.getElementById('playPauseBtn').textContent = '播放';
   }
   
   function prevPhoto() {
-      photoIndex = (photoIndex + 1 + photos.length) % photos.length;
-      photoSelect.selectedIndex = photoIndex;
-      document.getElementById('playPauseBtn').textContent = '播放'; // 重置播放按鈕文字
-      changePhoto();
-      pausePhoto(); // 停止播放並重置按鈕
+    photoIndex = (photoIndex - 1 + photos.length) % photos.length;
+    photoSelect.selectedIndex = photoIndex;
+    updatePhotoAndAudio();
   }
   
   function nextPhoto() {
-      photoIndex = (photoIndex + 1) % photos.length;
-      photoSelect.selectedIndex = photoIndex;
-      document.getElementById('playPauseBtn').textContent = '播放'; // 重置播放按鈕文字
-      changePhoto();
-      pausePhoto(); // 停止播放並重置按鈕
+    photoIndex = (photoIndex + 1) % photos.length;
+    photoSelect.selectedIndex = photoIndex;
+    updatePhotoAndAudio();
   }
   
   function resetProgress() {
-      const progressFilled = document.querySelector('.progress-filled');
-      progressFilled.style.width = '0%';
-      audio.currentTime = 0; // 重置音頻時間
+    audio.currentTime = 0;
   }
-  
-  function updateProgress() {
-      const progressFilled = document.querySelector('.progress-filled');
-      audio.addEventListener('timeupdate', () => {
-          const percent = (audio.currentTime / audio.duration) * 100;
-          progressFilled.style.width = percent + '%';
-      });
-  }
-  
   
   document.addEventListener('DOMContentLoaded', () => {
-      changePhoto(); // 初始化圖片和音訊
+    updatePhotoAndAudio();
   });
-  // 預載入音訊以減少延遲
-  document.getElementById('photoSelect').addEventListener('change', function() {
-      changePhoto();
-      if (audio.src) {
-          audio.load(); // 預載入音訊
-      }
-  });
+  function updatePhotoAndAudio() {
+  const { src, audio: audioSrc } = photos[photoIndex];
+  photo.src = src;
+  audio.src = audioSrc;
+  resetProgress();
+  audio.play(); // 切換時自動播放音檔
+  isPlaying = true; // 將狀態設為「播放中」
+  document.getElementById('playPauseBtn').textContent = '暫停'; // 更新按鈕文字
+}
+
   </script>
    </div>
   </div>
