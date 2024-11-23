@@ -694,7 +694,7 @@ body {
 }
 
 .portfolio-item img{
-
+  
     max-height: 200px; /* 設定圖片的最大高度 */
     width: 200px; /* 自動調整寬度以保持比例 */
     object-fit: contain; /* 保證圖片完整顯示 */
