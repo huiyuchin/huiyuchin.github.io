@@ -1,0 +1,9 @@
+/* colors.css */
+:root {
+    --primary-color: #d6fcff !important;
+    --secondary-color: #2c3e50;
+    --background-color: #fff;
+    --text-color: #2c3e50;
+    --link-color: #f3eccf;
+    --link-hover-color: #78c0d6;
+}

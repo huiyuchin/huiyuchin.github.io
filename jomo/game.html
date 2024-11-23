@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>JOMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Free HTML Templates" />
+  <meta name="description" content="Free HTML Templates" />
+
+   <!-- Favicon -->
+   <link href="img/favicon.ico" rel="icon" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Flaticon Font -->
+  <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/jomo.css" rel="stylesheet" />
+  <link href="css/game.css" rel="stylesheet" />
+  
+
+  <!-- React and ReactDOM -->
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+   <script src="game.js"></script>
+</head>
+<body>
+  <!-- Navbar Start -->
+  <div class="container-fluid bg-light fixed-top shadow blue">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a href="index.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 40px;">
+        <img src="img/JOMO_LOGO_1.png" alt="JOMO Logo" />
+        <img src="img/logo 2.png" alt="JOMO Logo" />
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between blue" id="navbarCollapse">
+        <div class="navbar-nav font-weight-bold ml-auto py-0">
+          <div class="nav-item">
+            <a href="aboutus.html" class="nav-link">關於我們</a>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">JOMO書櫃</a>
+            <div class="dropdown-menu rounded-0 m-0">
+              <a href="identity.html" class="dropdown-item">認同感</a>
+              <a href="scam.html" class="dropdown-item">網路詐騙</a>
+              <a href="addiction.html" class="dropdown-item">網路成癮</a>
+              <a href="imitate.html" class="dropdown-item">模仿不良行為</a>
+              <a href="bully.html" class="dropdown-item">網路霸凌</a>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">家長專區</a>
+            <div class="dropdown-menu rounded-0 m-0">
+              <a href="child.html" class="dropdown-item">兒童常用平台介紹</a>
+              <a href="filter.html" class="dropdown-item">過濾軟體介紹</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="regulation.html" class="nav-link">法規教室</a>
+          </div>
+          <div class="nav-item">
+            <a href="game.html" class="nav-link">JOMO遊戲室</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Navbar End -->
+  <div class="container center"> 
+    <div class="container-fluid py-5 mt-5">
+  
+<body>
+    <div id="quiz-container"></div>
+
+    <script>
+    const quizData = [
+        {
+            question: "兒童平均幾歲開始接觸社群媒體？",
+            options: ["8歲", "10歲", "12歲", "14歲"],
+            answer: 1
+        },
+        {
+            question: "每天使用電腦超過幾小時會增加視力下降的風險？",
+            options: ["2小時", "6小時", "10小時", "13小時"],
+            answer: 2
+        },
+        {
+            question: "Alpha 世代的孩子最常在哪一個平台上看到別人模仿危險或不良行為？",
+            options: ["YouTube", "Twitter", "TikTok", "Instagram"],
+            answer: 0
+        },
+        {
+            question: "全球平均每個人每天檢查手機幾次？",
+            options: ["25次", "80次", "150次", "200次"],
+            answer: 2
+        },
+        {
+            question: "Alpha世代最常玩的遊戲有哪些？",
+            options: ["《Minecraft》、《Roblox》", "《模擬市民》、《魔獸世界》", "《部落衝突》、《英雄聯盟》"],
+            answer: 0
+        },
+        {
+            question: "根據研究，多少百分比的家長不知道自己的孩子曾遭遇過網路霸凌？",
+            options: ["10%", "25%", "40%", "60%"],
+            answer: 3
+        },
+        {
+            question: "下列哪一張不是AI生成式人臉圖片？",
+            options: ["img/P.png", "img/P1.png", "img/P2.png", "img/P3.png"],
+            answer: 0,
+            type: "image"
+        },
+        {
+            question: "以下哪一首翻唱歌曲不是由AI生成的版本？",
+            options: ["audio/A.mp3", "audio/B.mp3", "audio/C.mp3", "audio/D.mp3"],
+            answer: 0,
+            type: "audio"
+        }
+    ];
+
+    class Quiz {
+        constructor(quizData, containerElement) {
+            this.quizData = quizData;
+            this.containerElement = containerElement;
+            this.userAnswers = {};
+            this.renderQuiz();
+        }
+
+        renderQuiz() {
+            const quizHTML = `
+                <div class="quiz-container mb-5">
+                    <h1>JOMO遊戲室</h1>
+                    ${this.quizData.map((q, index) => `
+                        <div class="question mb-5">
+                            <h5>${q.question}</h5>
+                            <div class="options">
+                                ${q.options.map((option, optionIndex) => {
+                                    if (q.type === "image") {
+                                        return `
+                                            <div 
+                                                class="option" 
+                                                data-question="${index}" 
+                                                data-option="${optionIndex}"
+                                            >
+                                                <img src="${option}" alt="選項 ${optionIndex + 1}">
+                                            </div>
+                                        `;
+                                    } else if (q.type === "audio") {
+                                        return `
+                                            <div 
+                                                class="option" 
+                                                data-question="${index}" 
+                                                data-option="${optionIndex}"
+                                            >
+                                                <audio src="${option}" controls></audio>
+                                            </div>
+                                        `;
+                                    } else {
+                                        return `
+                                            <div 
+                                                class="option" 
+                                                data-question="${index}" 
+                                                data-option="${optionIndex}"
+                                            >
+                                                ${option}
+                                            </div>
+                                        `;
+                                    }
+                                }).join('')}
+                            </div>
+                        </div>
+                    `).join('')}
+                    <button class="submit-btn btn-green">提交答案</button>
+                </div>
+            `;
+            
+            this.containerElement.innerHTML = quizHTML;
+            this.addEventListeners();
+        }
+
+        addEventListeners() {
+            const options = this.containerElement.querySelectorAll('.option');
+            options.forEach(option => {
+                option.addEventListener('click', (e) => {
+                    const questionIndex = e.target.closest('.option').getAttribute('data-question');
+                    const optionIndex = e.target.closest('.option').getAttribute('data-option');
+                    
+                    options.forEach(opt => {
+                        if (opt.getAttribute('data-question') === questionIndex) {
+                            opt.classList.remove('selected');
+                        }
+                    });
+                    
+                    e.target.closest('.option').classList.add('selected');
+                    
+                    this.userAnswers[questionIndex] = parseInt(optionIndex);
+                });
+            });
+
+            const submitBtn = this.containerElement.querySelector('.submit-btn');
+            submitBtn.addEventListener('click', () => this.submitQuiz());
+        }
+
+        submitQuiz() {
+            let score = 0;
+            const options = this.containerElement.querySelectorAll('.option');
+
+            this.quizData.forEach((q, index) => {
+                const selectedOption = this.userAnswers[index];
+                if (selectedOption === q.answer) {
+                    score++;
+                }
+
+                options.forEach(opt => {
+                    const questionIndex = opt.getAttribute('data-question');
+                    const optionIndex = opt.getAttribute('data-option');
+
+                    if (parseInt(questionIndex) === index) {
+                        opt.classList.remove('selected');
+                        if (parseInt(optionIndex) === q.answer) {
+                            opt.classList.add('correct');
+                        } else if (selectedOption === parseInt(optionIndex)) {
+                            opt.classList.add('incorrect');
+                        }
+                    }
+                });
+            });
+
+            this.showResultModal(score);
+        }
+
+        showResultModal(score) {
+            const modalHTML = `
+                <div class="result-modal">
+                    <div class="modal-content">
+                        <h2>測驗結果</h2>
+                        <p>你答對了 ${score} / ${this.quizData.length} 題！</p>
+                        <button onclick="document.querySelector('.result-modal').remove()">關閉</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', modalHTML);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const quizContainer = document.getElementById('quiz-container');
+        new Quiz(quizData, quizContainer);
+    });
+    </script>
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary p-2 back-to-top"
+><i class="fa fa-angle-double-up"></i</a>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
+</body>
+</html>

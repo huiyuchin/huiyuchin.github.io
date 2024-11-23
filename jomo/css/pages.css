@@ -1,0 +1,187 @@
+/* 確保 html 和 body 佔滿整個視窗 */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 內頁內容容器 */
+  .container {
+    max-width: 1000px; /* 調整為適合的最大寬度 */
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* 大標題樣式 */
+  h1.text-primary {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  /* 大標題下方圖片 */
+  .text-center img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* 快速導覽樣式 */
+  .quick-nav {
+    background-color: #d6fcff ;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .quick-nav h4 {
+    margin-bottom: 10px;
+  }
+  
+  .quick-nav ul {
+    padding-left: 0;
+    list-style: none;
+    text-align: center; /* 將列表項目居中 */
+  }
+  
+  .quick-nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .quick-nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .quick-nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+  }
+  
+  .quick-nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 子標題樣式 */
+  .content-section h2.text-secondary {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  /* 內文段落樣式 */
+  .content-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* 內文列表樣式 */
+  .content-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .content-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* 圖片樣式 */
+  .content-section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Footer Logo Responsiveness */
+  .footer-logo {
+    max-width: 100%; /* 確保圖片的最大寬度不超過容器的 100% */
+    height: auto; /* 自動調整高度以保持比例 */
+  }
+  
+  /* 固定 Back to Top 按鈕位置 */
+  .back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none; /* 初始隱藏，視需要顯示 */
+    z-index: 1000; /* 確保按鈕在最上層 */
+  }
+  
+  .back-to-top.show {
+    display: block;
+  }
+  
+  /* 社交媒體圖示樣式 */
+  .social-icon {
+    font-size: 30px; /* 調整社交媒體圖示大小 */
+    margin-right: 10px;
+  }
+  
+  .social-text {
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  
+  /* 信箱連結樣式 */
+  .mail {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .mail:hover {
+    text-decoration: underline;
+  }
+  
+  /* 內容區塊的圖片和文字排列 */
+  .content-section .row {
+    align-items: flex-start;
+  }
+  
+  /* 調整行內元素間距 */
+  .content-section .row .col-md-6 {
+    padding: 10px;
+  }
+  
+  /* Footer Bottom 樣式 */
+  .footer-bottom p {
+    font-size: 10px;
+  }
+  
+  /* 調整 Footer Bottom 中的連結顏色 */
+  .footer-bottom a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    text-decoration: underline;
+  }
+  
+  /* 移除 Breadcrumb 的點點並調整樣式 */
+  .breadcrumb {
+    background-color: transparent;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #6c757d;
+    margin: 0 5px;
+  }
+  
+  /* 調整 Breadcrumb 的樣式 */
+  .custom-breadcrumb .breadcrumb {
+    justify-content: center;
+  }
+  
+  /* 移除不必要的點點 */
+  ul, ol {
+    padding-left: 0;
+    margin-left: 0;
+  }
+  
+  ul li, ol li {
+    list-style: none;
+  }
+  
