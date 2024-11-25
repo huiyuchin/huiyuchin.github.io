@@ -84,33 +84,37 @@
 <div class="container mt-5 mb-5">
   <!-- 主要內容 -->
 </div> 
-<div class="container-fluid pt-5 pb-5"> 
-  <div class="container"> 
-      <div class="row"> 
-          <!-- 書櫃區域 --> 
-          <div class="col-md-3 text-left"> <!-- 將文字對齊方式設置為右 -->
-            <div class="bookshelf">
-                <a href="imitate.html" class="book">
-                    <img src="img/1.JPG" alt="模仿不良行為" class="book-img">
-                    <p>模仿不良行為</p> <!-- 書籍的文字 -->
-                </a>
-                <a href="scam.html" class="book">
-                    <img src="img/1.JPG" alt="網路詐騙" class="book-img">
-                    <p>網路詐騙</p> <!-- 書籍的文字 -->
-                </a>
-                <a href="addiction.html" class="book">
-                    <img src="img/1.JPG" alt="網路成癮" class="book-img">
-                    <p>網路成癮</p> <!-- 書籍的文字 -->
-                </a>
-                <a href="bully.html" class="book">
-                    <img src="img_3/1.png" alt="網路霸凌" class="book-img">
-                    <p>網路霸凌</p> <!-- 書籍的文字 -->
-                </a>
-            </div>
+<div class="container-fluid pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <!-- 書櫃區域 -->
+      <div class="col-md-3 text-left"> <!-- 修改寬度比例 -->
+        <div class="bookshelf d-flex flex-wrap justify-content-between">
+          <a href="identity.html" class="book"> <!-- 新增的書 -->
+            <img src="img/1.jpeg" alt="新書籍" class="book-img star-shadow">
+            <p>認同感</p>
+          </a>
+          <a href="addiction.html" class="book">
+            <img src="img/2.jpeg" alt="網路成癮" class="book-img star-shadow">
+            <p>網路成癮</p>
+          </a>
+          <a href="bully.html" class="book">
+            <img src="img/3.jpeg" alt="網路霸凌" class="book-img star-shadow">
+            <p>網路霸凌</p>
+          </a>
+          <a href="imitate.html" class="book">
+            <img src="img/4.jpeg" alt="模仿不良行為" class="book-img star-shadow">
+            <p>模仿不良行為</p>
+          </a>
+          <a href="scam.html" class="book">
+            <img src="img/5.jpeg" alt="網路詐騙" class="book-img star-shadow">
+            <p>網路詐騙</p>
+          </a>
         </div>
-        
+      </div>
+  
         <!-- 播放器區域 -->
-<div class="col-md-7"> <!-- 增加此區域來顯示播放器 -->
+<div class="col-md-8"> <!-- 增加此區域來顯示播放器 -->
   <div class="tv-frame">
       <h1 class="tv-title">小奈與她的正能量手環</h1>
       <img id="photo" src="img/1.JPG" alt="Photo Viewer" class="img-fluid rounded shadow-sm">
@@ -119,7 +123,7 @@
 
   <div class="controls-container">
     <select id="photoSelect" onchange="changePhoto()">
-        <option value="img_1/1.JPG" data-audio="audio/封面.mp3">封面</option>
+        <option value="img/1.jpeg" data-audio="audio/封面.mp3">封面</option>
         <option value="img_1/2.JPG" data-audio="audio/0.mp3">第0頁</option>
         <option value="img_1/3.jpeg" data-audio="audio/1.mp3">第1頁</option>
         <option value="img_1/4.jpeg" data-audio="audio/2.mp3">第2頁</option>
@@ -138,11 +142,10 @@
         <option value="img_1/17.jpeg" data-audio="audio/15.mp3">第15頁</option>
         <option value="img_1/18.jpeg" data-audio="audio/16.mp3">第16頁</option>
     </select>
-    <button id="prevBtn" onclick="prevPhoto()">上一張</button>
+    <button id="prevBtn" onclick="prevPhoto()" >上一張</button>
     <button id="playPauseBtn" onclick="playPausePhoto()">播放</button>
     <button id="nextBtn" onclick="nextPhoto()">下一張</button>
 </div>
-
   <audio id="audio"></audio>
 </div>
 </div>
