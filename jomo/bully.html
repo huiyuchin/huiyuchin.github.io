@@ -91,24 +91,24 @@
       <div class="col-md-3 text-left"> <!-- 修改寬度比例 -->
         <div class="bookshelf d-flex flex-wrap justify-content-between">
           <a href="identity.html" class="book"> <!-- 新增的書 -->
-            <img src="img/1.jpeg" alt="新書籍" class="book-img star-shadow">
-            <p>認同感</p>
+            <img src="img/1.jpeg" alt="新書籍" class="book-img star-shadow ">
+            <p class="pl-3">認同感</p>
           </a>
           <a href="addiction.html" class="book">
             <img src="img/2.jpeg" alt="網路成癮" class="book-img star-shadow">
-            <p>網路成癮</p>
+            <p class="pl-3">網路成癮</p>
           </a>
           <a href="bully.html" class="book">
             <img src="img/3.jpeg" alt="網路霸凌" class="book-img star-shadow">
-            <p>網路霸凌</p>
+            <p class="pl-3">網路霸凌</p>
           </a>
           <a href="imitate.html" class="book">
             <img src="img/4.jpeg" alt="模仿不良行為" class="book-img star-shadow">
-            <p>模仿不良行為</p>
+            <p class="pl-3">模仿不良行為</p>
           </a>
           <a href="scam.html" class="book">
             <img src="img/5.jpeg" alt="網路詐騙" class="book-img star-shadow">
-            <p>網路詐騙</p>
+            <p class="pl-3">網路詐騙</p>
           </a>
         </div>
       </div>
@@ -124,24 +124,25 @@
 
               <div class="controls-container">
                 <select id="photoSelect" onchange="changePhoto()">
-                  <option value="img/3.jpeg" data-audio="">封面</option>
-                    <option value="img_3/commingsoon.png" data-audio="">第0頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第1頁描述">第1頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第2頁描述">第2頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第3頁描述">第3頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第4頁描述">第4頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第5頁描述">第5頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第6頁描述">第6頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第7頁描述">第7頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第8頁描述">第8頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第9頁描述">第9頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第10頁描述">第10頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第11頁描述">第11頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第12頁描述">第12頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第13頁描述">第13頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第14頁描述">第14頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第15頁描述">第15頁</option>
-                    <option value="img_3/commingsoon.png" data-audio="" data-desc="第16頁描述">第16頁</option>
+                  <option value="img_3/1.jpeg" data-audio="audio3/封面.mp3">封面</option>
+                  <option value="img_3/2.jpeg" data-audio="audio3/0.mp3">第0頁</option>
+                  <option value="img_3/3.jpeg" data-audio="audio3/1.mp3">第1頁</option>
+                  <option value="img_3/4.jpeg" data-audio="audio3/2.mp3">第2頁</option>
+                  <option value="img_3/5.jpeg" data-audio="audio3/3.mp3">第3頁</option>
+                  <option value="img_3/6.jpeg" data-audio="audio3/4.mp3">第4頁</option>
+                  <option value="img_3/7.jpeg" data-audio="audio3/5.mp3">第5頁</option>
+                  <option value="img_3/8.jpeg" data-audio="audio3/6.mp3">第6頁</option>
+                  <option value="img_3/9.jpeg" data-audio="audio3/7.mp3">第7頁</option>
+                  <option value="img_3/10.jpeg" data-audio="audio3/8.mp3">第8頁</option>
+                  <option value="img_3/11.jpeg" data-audio="audio3/9.mp3">第9頁</option>
+                  <option value="img_3/12.jpeg" data-audio="audio3/10.mp3">第10頁</option>
+                  <option value="img_3/13.jpeg" data-audio="audio3/11.mp3">第11頁</option>
+                  <option value="img_3/14.jpeg" data-audio="audio3/12.mp3">第12頁</option>
+                  <option value="img_3/15.jpeg" data-audio="audio3/13.mp3">第13頁</option>
+                  <option value="img_3/16.jpeg" data-audio="audio3/14.mp3">第14頁</option>
+                  <option value="img_3/17.jpeg" data-audio="audio3/15.mp3">第15頁</option>
+                  <option value="img_3/18.jpeg" data-audio="audio3/16.mp3">第16頁</option>
+                  <option value="img_3/19.jpeg" data-audio="audio3/封底.mp3">封底</option>
                 </select>
 
 
@@ -229,7 +230,15 @@
   isPlaying = true; // 將狀態設為「播放中」
   document.getElementById('playPauseBtn').textContent = '暫停'; // 更新按鈕文字
 }
+audio.addEventListener('ended', () => {
+  isPlaying = false;
+  document.getElementById('playPauseBtn').textContent = '播放'; // 切換回「播放」文字
+});
 
+// 頁面載入時初始化
+document.addEventListener('DOMContentLoaded', () => {
+  updatePhotoAndAudio();
+});
   </script>
    </div>
   </div>
