@@ -47,8 +47,8 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
     color:pink;
 }
 .expedu_icon:hover{
-    background-color: hotpink;
-    color:pink;  
+
+    color:hotpink;  
 }
 ol.zoeylist{
     list-style-type: upper-alpha;
@@ -123,7 +123,7 @@ table.zoeytable tr:nth-child(odd){
     text-transform: lowercase;
 }
 .zoey{
-    padding-right: 50px !important;
+  width: 8%;
 }
 .lip{
     color: dimgray;
@@ -140,9 +140,7 @@ table.zoeytable tr:nth-child(odd){
         width: auto;
         height: 300px; 
     }
-.zoeypro:hover{
-   
-}
+
 .w-100{
     width: 100% !important;
 }
@@ -163,4 +161,11 @@ table.zoeytable tr:nth-child(odd){
 }
 .subheading{
     font-family: serif !important;
+}
+.icon{
+    color: rgb(173, 218, 218);
+}
+.icon:hover{
+    background-color: rgb(98, 132, 132);
+    color: rgb(173, 218, 218);
 }
