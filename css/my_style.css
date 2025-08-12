@@ -43,6 +43,7 @@ body{
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
     font-family: 'Noto Sans TC',sans-serif;
 }
+
 .expedu_icon{
     color:pink;
 }
@@ -122,6 +123,10 @@ table.zoeytable tr:nth-child(odd){
     color: rgb(58, 81, 95);
     text-transform: lowercase;
 }
+.phone{
+    color: rgb(58, 81, 95);
+    text-transform: lowercase;
+}
 .zoey{
   width: 8%;
 }
@@ -168,4 +173,63 @@ table.zoeytable tr:nth-child(odd){
 .icon:hover{
     background-color: rgb(98, 132, 132);
     color: rgb(173, 218, 218);
+}
+@media (max-width: 768px) {
+    .social-icons .mx-3 {
+        display: block; /* 讓「聯絡我」與「寄信給我」各自佔一行 */
+        margin-bottom: 0.5rem; /* 分開一點 */
+    }
+}
+@media (max-width: 768px) {
+    .social-icons h4 {
+        font-size: 1.5rem; /* 平板 & 手機稍微縮小字體 */
+    }
+}
+.social-icons {
+    display: flex;
+    flex-direction: column; /* 每個 contact-item 垂直排列 */
+    gap: 0.5rem; /* 各組之間留間距 */
+    align-items: center; /* 置中 */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* icon/文字之間的間距 */
+    flex-wrap: wrap; /* 小螢幕自動換行 */
+    font-size: 1.2rem;
+}
+
+.contact-item .label {
+    font-weight: bold;
+}
+
+.contact-item a {
+    text-decoration: none;
+}
+
+.social-icon i {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.social-icon i:hover {
+    color: #007bff;
+}
+
+/* 手機字體縮小 */
+@media (max-width: 576px) {
+    .contact-item {
+        font-size: 1rem;
+    }
+    .social-icon i {
+        font-size: 1rem;
+    }
+}
+.label {
+    text-shadow: 
+    2px 2px 4px rgba(0,0,0,0.6), /* 黑色陰影 */
+    -1px -1px 2px rgba(255,255,255,0.3); /* 淡白色反光 */
+   
 }
