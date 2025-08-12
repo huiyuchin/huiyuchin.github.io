@@ -176,20 +176,20 @@ table.zoeytable tr:nth-child(odd){
 }
 @media (max-width: 768px) {
     .social-icons .mx-3 {
-        display: block; /* 讓「聯絡我」與「寄信給我」各自佔一行 */
-        margin-bottom: 0.5rem; /* 分開一點 */
+        display: block; 
+        margin-bottom: 0.5rem; 
     }
 }
 @media (max-width: 768px) {
     .social-icons h4 {
-        font-size: 1.5rem; /* 平板 & 手機稍微縮小字體 */
+        font-size: 1.5rem; 
     }
 }
 .social-icons {
     display: flex;
-    flex-direction: column; /* 每個 contact-item 垂直排列 */
-    gap: 0.5rem; /* 各組之間留間距 */
-    align-items: center; /* 置中 */
+    flex-direction: column; 
+    gap: 0.5rem; 
+    align-items: center; 
 }
 
 .contact-item {
@@ -229,14 +229,8 @@ table.zoeytable tr:nth-child(odd){
 }
 .label {
     text-shadow: 
-    2px 2px 4px rgba(0,0,0,0.6), /* 黑色陰影 */
-    -1px -1px 2px rgba(255,255,255,0.3); /* 淡白色反光 */
-   
-}
-.label {
-    text-shadow: 
-    2px 2px 4px rgba(0,0,0,0.6), /* 黑色陰影 */
-    -1px -1px 2px rgba(255,255,255,0.3); /* 淡白色反光 */
+    2px 2px 4px rgba(0,0,0,0.6), 
+    -1px -1px 2px rgba(255,255,255,0.3); 
    
 }
 
